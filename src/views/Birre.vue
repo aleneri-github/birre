@@ -2,7 +2,12 @@
 
     <div class="birre">
       <!-- <Title value="Birre" /> -->
-      <!-- <h2>Pagina corrente: {{page}}</h2> -->
+      <h2>Pagina corrente: {{page}}</h2>
+      <div class="btn">
+        <button type="button" name="prevBtn" @click="prevPage()">Pagina precedente</button>
+        <button type="button" name="nextBtn" @click="nextPage()">Pagina successiva</button>
+      </div>
+
 
 
     <div class="container" v-if="beers.length > 0">
@@ -13,11 +18,6 @@
         <p>{{beer.description}}</p>
       </div>
 
-
-    </div>
-    <div class="btn">
-      <button type="button" name="prevBtn" @click="prevPage()">Pagina precedente</button>
-      <button type="button" name="nextBtn" @click="nextPage()">Pagina successiva</button>
 
     </div>
 
@@ -64,6 +64,12 @@ export default {
 
 <style>
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .container {
   width: 100%;
   background-color: pink;
@@ -74,12 +80,18 @@ export default {
 }
 
 .details {
-  background-color: yellow;
+  background-color: white;
   width: calc(100% / 3 - 20px);
   margin: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 img {
   height: 200px;
+}
+
+img:hover {
+  transform: scale(1.1);
 }
 </style>
