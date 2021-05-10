@@ -1,14 +1,16 @@
 <template>
 
     <div class="birre">
-      <Title value="Birre" />
-      <h2>Pagina corrente: {{page}}</h2>
+      <!-- <Title value="Birre" /> -->
+      <!-- <h2>Pagina corrente: {{page}}</h2> -->
 
 
-    <div v-if="beers.length > 0">
+    <div class="container" v-if="beers.length > 0">
       <div class="details" v-for="beer in beers" :key="beer.id">
         <h3>{{beer.name}}</h3>
+        <h5>{{beer.tagline}}</h5>
         <img :src="beer.image_url" alt="beer-img">
+        <p>{{beer.description}}</p>
       </div>
 
 
@@ -23,13 +25,13 @@
 </template>
 
 <script>
-import Title from "../components/Title";
+// import Title from "../components/Title";
 import axios from 'axios';
 
 export default {
-  components: {
-    Title
-  },
+  // components: {
+  //   Title
+  // },
   created() {
     // page è una variabile che cambia al click sui pulsanti
     this.getBeers();
@@ -62,15 +64,19 @@ export default {
 
 <style>
 
-.birre {
+.container {
   width: 100%;
   background-color: pink;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .details {
   background-color: yellow;
+  width: calc(100% / 3 - 20px);
+  margin: 10px;
 }
 
 img {

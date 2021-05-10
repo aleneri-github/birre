@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <h1>Ciao {{this.value}} !</h1>
   </div>
@@ -18,4 +18,4 @@ export default {
 <style>
 
 
-</style>
+</style> -->
