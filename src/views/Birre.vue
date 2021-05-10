@@ -1,17 +1,24 @@
 <template>
-  <div class="birre">
-    <Title value="Birre" />
 
-    <h2>Pagina corrente: {{page}}</h2>
+    <div class="birre">
+      <Title value="Birre" />
+      <h2>Pagina corrente: {{page}}</h2>
+
+
     <div v-if="beers.length > 0">
-      <div class="details" v-for="beer in beers" :key="beer.id"> <h3>{{beer.name}}</h3>
+      <div class="details" v-for="beer in beers" :key="beer.id">
+        <h3>{{beer.name}}</h3>
         <img :src="beer.image_url" alt="beer-img">
       </div>
 
 
     </div>
-    <button type="button" name="prevBtn" @click="prevPage()">Pagina precedente</button>
-    <button type="button" name="nextBtn" @click="nextPage()">Pagina successiva</button>
+    <div class="btn">
+      <button type="button" name="prevBtn" @click="prevPage()">Pagina precedente</button>
+      <button type="button" name="nextBtn" @click="nextPage()">Pagina successiva</button>
+
+    </div>
+
   </div>
 </template>
 
@@ -54,15 +61,19 @@ export default {
 </script>
 
 <style>
-/* .birre {
+
+.birre {
+  width: 100%;
+  background-color: pink;
   display: flex;
   justify-content: center;
-  align-items: center;
-
 }
-.details {
-  width: 200px;
-  height: 300px;
 
-} */
+.details {
+  background-color: yellow;
+}
+
+img {
+  height: 200px;
+}
 </style>

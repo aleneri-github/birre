@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/birre">Birre</router-link>
+      <header>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/birre">Birre</router-link>
+      </header>
     </div>
 
     <!-- sostituisce se stesso con il componente associato all'url su cui si trova l'utente -->
@@ -29,6 +31,12 @@
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+
+  header {
+    background-color: green;
+    height: 100px;
+    width: 100%;
   }
 }
 </style>
