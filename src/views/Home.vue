@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <!-- <Title value="Home" /> -->
+    <div class="background">
+
+    </div>
   </div>
 </template>
 
@@ -16,11 +19,15 @@
 
 <style>
   .home {
-    height: 500px;
+    height: calc(100vh - 100px);
+  }
 
-    background-image: url('/home-img.jpg');
+  .background {
+    height: 70%;
+    background-image: url('/birre.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
 
