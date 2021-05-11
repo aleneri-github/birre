@@ -6,7 +6,8 @@
     <div id="nav">
       <header>
         <router-link to="/">Home</router-link> |
-        <router-link to="/birre">Birre</router-link>
+        <router-link to="/birre">Birre</router-link> |
+        <router-link to="/dettaglio/:id">Dettaglio Birra</router-link>
       </header>
     </div>
 
@@ -45,7 +46,7 @@
   }
 
   header {
-    height: 70px;
+    height: 50px;
     width: 100%;
   }
 }

@@ -2,22 +2,22 @@
 
     <div class="birre">
       <!-- <Title value="Birre" /> -->
-      <h2>Pagina corrente: {{page}}</h2>
+      <h2>Pagina: {{page}}</h2>
       <div class="btn">
         <button type="button" name="prevBtn" @click="prevPage()"><i class="fas fa-arrow-circle-left"></i></button>
         <button type="button" name="nextBtn" @click="nextPage()"><i class="fas fa-arrow-circle-right"></i></button>
       </div>
 
 
-
     <div class="container" v-if="beers.length > 0">
       <div class="details" v-for="beer in beers" :key="beer.id">
+        <router-link to="/dettaglio/:id">
         <h3>{{beer.name}}</h3>
-        <h5>{{beer.tagline}}</h5>
+        <!-- <h5>{{beer.tagline}}</h5> -->
         <img :src="beer.image_url" alt="beer-img">
+        </router-link>
         <!-- <p>{{beer.description}}</p> -->
       </div>
-
 
     </div>
 
@@ -71,8 +71,10 @@ export default {
 }
 
 button {
-  width: 70px;
+  width: 50px;
   height: 50px;
+  border-radius: 100%;
+  margin: 5px;
 }
 
 .birre {
@@ -81,6 +83,7 @@ button {
 
 .container {
   width: 100%;
+  /* height: 100vh; */
   background-color: #543233;
   display: flex;
   justify-content: center;
@@ -90,19 +93,21 @@ button {
 
 .details {
   background-color: white;
-  width: calc(100% / 3 - 50px);
-  margin: 25px;
-  padding: 10px;
+  width: calc(100% / 5 - 10px);
+  height: 250px;
+  margin: 5px;
+  padding: 20px;
   cursor: pointer;
   border: 4px solid #3C2C23;
+  border-radius: 25px;
 }
 
 .details:hover {
-  transform: scale(1.1);
+  transform: translatey(-10px);
 }
 
 img {
-  height: 200px;
+  height: 150px;
 }
 
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>Ciao About</h1>
+    <h1>Dettaglio birra</h1>
+
   </div>
 </template>
