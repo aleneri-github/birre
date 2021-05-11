@@ -4,8 +4,8 @@
       <!-- <Title value="Birre" /> -->
       <h2>Pagina corrente: {{page}}</h2>
       <div class="btn">
-        <button type="button" name="prevBtn" @click="prevPage()">Pagina precedente</button>
-        <button type="button" name="nextBtn" @click="nextPage()">Pagina successiva</button>
+        <button type="button" name="prevBtn" @click="prevPage()"><i class="fas fa-arrow-circle-left"></i></button>
+        <button type="button" name="nextBtn" @click="nextPage()"><i class="fas fa-arrow-circle-right"></i></button>
       </div>
 
 
@@ -15,7 +15,7 @@
         <h3>{{beer.name}}</h3>
         <h5>{{beer.tagline}}</h5>
         <img :src="beer.image_url" alt="beer-img">
-        <p>{{beer.description}}</p>
+        <!-- <p>{{beer.description}}</p> -->
       </div>
 
 
@@ -70,9 +70,18 @@ export default {
   box-sizing: border-box;
 }
 
+button {
+  width: 70px;
+  height: 50px;
+}
+
+.birre {
+  background-color: #543233;
+}
+
 .container {
   width: 100%;
-  background-color: pink;
+  background-color: #543233;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -81,17 +90,19 @@ export default {
 
 .details {
   background-color: white;
-  width: calc(100% / 3 - 20px);
-  margin: 10px;
+  width: calc(100% / 3 - 50px);
+  margin: 25px;
   padding: 10px;
   cursor: pointer;
+  border: 4px solid #3C2C23;
+}
+
+.details:hover {
+  transform: scale(1.1);
 }
 
 img {
   height: 200px;
 }
 
-img:hover {
-  transform: scale(1.1);
-}
 </style>
