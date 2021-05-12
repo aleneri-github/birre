@@ -3,6 +3,10 @@
     <div class="birre">
       <!-- <Title value="Birre" /> -->
       <h2>Pagina {{page}}</h2>
+      <div class="btn">
+        <button type="button" name="prevBtn" @click="prevPage(), scrollToTop()"><i class="fas fa-arrow-circle-left"></i></button>
+        <button type="button" name="nextBtn" @click="nextPage(), scrollToTop()"><i class="fas fa-arrow-circle-right"></i></button>
+      </div>
 
 
 
@@ -90,6 +94,7 @@ button {
   height: 50px;
   border-radius: 100%;
   margin: 5px;
+  background-color: #FFD23F;
 }
 
 
