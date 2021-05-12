@@ -3,11 +3,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital@1&display=swap" rel="stylesheet">
     <div id="nav">
       <header>
         <router-link to="/">Home</router-link> |
-        <router-link to="/birre">Birre</router-link> |
-        <router-link to="/dettaglio/:id">Dettaglio Birra</router-link>
+        <router-link to="/birre">Birre</router-link>
+        <!-- <router-link to="/dettaglio/:id">Dettaglio Birra</router-link> -->
       </header>
     </div>
 
@@ -22,6 +24,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Bebas Neue', cursive;
+  color: black;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,7 +37,7 @@
 #nav {
   padding: 15px;
   font-size: 40px;
-  background-color: #F5CA01;
+  background-color: #FFD23F;
 
   a {
     font-weight: bold;
