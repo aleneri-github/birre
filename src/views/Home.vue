@@ -1,18 +1,13 @@
 <template>
   <div class="home">
-    <!-- <Title value="Home" /> -->
-    <img id="logo" src="/birrificio-del-forte-logo.png" alt="logo">
+    <router-link to="/birre">
+      <img class="animated infinite tada" id="logo" src="/birre-manicomio.jpg" alt="logo">    
+    </router-link>
   </div>
 </template>
 
 <script>
-// import Title from "../components/Title";
-// export default {
-//   name: 'Home',
-//   components: {
-//     Title
-//   }
-// }
+
 </script>
 
 <style>
@@ -26,20 +21,12 @@
 
   #logo {
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    top: 25%;
+    left: 40%;
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    border: 4px solid #F9CA02;
+    animation-duration: 3s;
   }
-
-  /* .background {
-    height: 50%;
-    background-image: url('/birre.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  } */
-
-
 </style>

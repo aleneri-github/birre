@@ -5,15 +5,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=KoHo:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <div id="nav">
       <header>
         <router-link to="/">Home</router-link> |
         <router-link to="/birre">Birre</router-link>
-        <!-- <router-link to="/dettaglio/:id">Dettaglio Birra</router-link> -->
       </header>
     </div>
-
-    <!-- sostituisce se stesso con il componente associato all'url su cui si trova l'utente -->
     <router-view />
   </div>
 </template>
@@ -26,6 +24,7 @@
   font-family: 'Bebas Neue', cursive;
   color: black;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +36,9 @@
 #nav {
   padding: 15px;
   font-size: 40px;
-  background-color: #FFD23F;
+  background-color: #F9CA02;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 
   a {
     font-weight: bold;
@@ -51,6 +52,8 @@
   header {
     height: 50px;
     width: 100%;
+    padding: 0px 50px;
+    text-align: right;
   }
 }
 </style>
