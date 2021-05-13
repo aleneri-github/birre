@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <router-link to="/birre">
-      <img class="animated infinite tada" id="logo" src="/birre-manicomio.jpg" alt="logo">    
+      <img class="animated infinite tada" id="logo" src="/birre-manicomio.jpg" alt="logo">
     </router-link>
   </div>
 </template>

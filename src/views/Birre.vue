@@ -26,6 +26,43 @@
           </div>
         </div>
         <div class="overlay">
+          <div class="overlay-top">
+            <div class="overlay-top-left">
+              <h5>INGREDIENTS</h5>
+              <h6>MALT</h6>
+              <ul>
+                <li>{{beer.ingredients.malt[0].name}}</li>
+                <li>{{beer.ingredients.malt[1].name}}</li>
+              </ul>
+              <h6>HOPS</h6>
+              <ul>
+                <li>{{beer.ingredients.hops[0].name}}</li>
+              </ul>
+              <h6>HOPS</h6>
+              <ul>
+                <li>{{beer.ingredients.yeast}}</li>
+              </ul>
+
+            </div>
+            <div class="overlay-top-right">
+              <h5>FOOD PAIRING</h5>
+              <ul>
+                <li>{{beer.food_pairing[0]}}</li>
+                <li>{{beer.food_pairing[1]}}</li>
+                <li>{{beer.food_pairing[2]}}</li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="overlay-bottom">
+            <h5>BREWERS TIPS</h5>
+            <p>
+              {{beer.brewers_tips}}
+            </p>
+
+          </div>     
+
 
         </div>
       </div>
@@ -181,7 +218,34 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: #F9CA02;
+    padding: 5px;
+  }
+
+  .overlay-top {
+    height: 50%;
+    width: 100%;
+  }
+
+  .overlay-top-left {
+    height: 100%;
+    width: 50%;
+    float: left;
+  }
+
+  .overlay-top-right {
+    height: 100%;
+    width: 50%;
+    float: left;
+  }
+
+  .overlay-bottom {
+    height: 50%;
+    width: 100%;
+  }
+
+  .overlay li {
+    list-style: none;
   }
 
   .details:hover .overlay {
