@@ -13,7 +13,7 @@
 <style>
   .home {
     position: relative;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 86px);
     background-image: url('https://st.depositphotos.com/2471189/4132/i/950/depositphotos_41321775-stock-photo-beer-texture.jpg');
     background-size: cover;
     background-position: top;

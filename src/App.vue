@@ -9,7 +9,7 @@
     <div id="nav">
       <header>
         <router-link to="/">Home</router-link> |
-        <router-link to="/birre">Birre</router-link>
+        <router-link to="/birre">Beers</router-link>
       </header>
     </div>
     <router-view />

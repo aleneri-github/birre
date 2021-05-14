@@ -7,7 +7,7 @@
       </button>
       <button type="button" name="nextBtn" @click="nextPage(), scrollToTop()"><i class="fas fa-arrow-right"></i>
       </button>
-      <h2>Pagina {{page}}</h2>
+      <h2>Page {{page}}</h2>
     </div>
 
     <div class="container" v-if="beers.length > 0">
@@ -29,20 +29,18 @@
           <div class="overlay-top">
             <div class="overlay-top-left">
               <h5>INGREDIENTS</h5>
-              <h6>MALT</h6>
+              <h5>MALT</h5>
               <ul>
                 <li>{{beer.ingredients.malt[0].name}}</li>
-                <li>{{beer.ingredients.malt[1].name}}</li>
               </ul>
-              <h6>HOPS</h6>
+              <h5>HOPS</h5>
               <ul>
                 <li>{{beer.ingredients.hops[0].name}}</li>
               </ul>
-              <h6>HOPS</h6>
+              <h5>YEAST</h5>
               <ul>
                 <li>{{beer.ingredients.yeast}}</li>
               </ul>
-
             </div>
             <div class="overlay-top-right">
               <h5>FOOD PAIRING</h5>
@@ -51,24 +49,19 @@
                 <li>{{beer.food_pairing[1]}}</li>
                 <li>{{beer.food_pairing[2]}}</li>
               </ul>
-
             </div>
-
           </div>
           <div class="overlay-bottom">
             <h5>BREWERS TIPS</h5>
             <p>
               {{beer.brewers_tips}}
             </p>
-
-          </div>     
-
-
+          </div>
         </div>
       </div>
     </div>
     <div class="btn">
-      <h2>Pagina {{page}}</h2>
+      <h2>Page {{page}}</h2>
       <button type="button" name="prevBtn" @click="prevPage(), scrollToTop()"><i class="fas fa-arrow-left"></i>
       </button>
       <button type="button" name="nextBtn" @click="nextPage(), scrollToTop()"><i class="fas fa-arrow-right"></i>
@@ -92,8 +85,7 @@
     methods: {
       getBeers() {
         axios.get(`https://api.punkapi.com/v2/beers?page=${this.page}&per_page=10`)
-          .then(result => this.beers = result.data)
-          .catch(error => console.log(error));
+          .then(result => this.beers = result.data);
       },
       prevPage() {
         if (this.page >= 2) {
@@ -123,7 +115,7 @@
   }
 
   .btn {
-    background-image: url('https://thumbs.dreamstime.com/b/texture-brown-wood-table-restaurant-bar-natural-top-wiev-133355373.jpg');
+    background-color: #6D3814;
   }
 
   button {
@@ -143,8 +135,8 @@
 
   .container {
     width: 100%;
-    background-image: url('https://thumbs.dreamstime.com/b/texture-brown-wood-table-restaurant-bar-natural-top-wiev-133355373.jpg');
-    padding: 50px 100px;
+    background-color: #6D3814;
+    padding: 50px 50px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -154,12 +146,13 @@
   .details {
     position: relative;
     background-color: whitesmoke;
-    width: calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 90px);
     height: 340px;
-    margin: 10px;
+    margin: 10px 45px;
     overflow: hidden;
     border: 4px solid #3C2C23;
     border-radius: 25px;
+    cursor: pointer;
   }
 
   .btn h2 {
@@ -171,7 +164,6 @@
   }
 
   h5 {
-    margin-top: 15px;
     font-size: 18px;
   }
 
@@ -195,7 +187,7 @@
 
   .img-beer-bottom {
     height: 20%;
-    padding: 5px;
+    padding-top: 25px;
   }
 
   .info-beer {
@@ -203,7 +195,7 @@
     width: 65%;
     float: right;
     padding: 5px;
-    background-image: url('https://f.vividscreen.info/soft/60f60e41ad82985d44a51f9cd4109c4e/Beer-Texture-1920x1080.jpg');
+    background-image: url('/Beer-Texture.jpg');
     background-size: cover;
   }
 
@@ -242,6 +234,7 @@
   .overlay-bottom {
     height: 50%;
     width: 100%;
+    padding: 5px;
   }
 
   .overlay li {
@@ -252,5 +245,12 @@
     opacity: 1;
     transition-duration: 1s;
   }
+
+  @media screen and (max-width: 1024px) {
+        .details {
+            width: calc(100% / 1 - 90px);
+        }
+
+    }
 
 </style>
