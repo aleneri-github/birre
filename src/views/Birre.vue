@@ -3,9 +3,13 @@
   <div class="birre">
 
     <div class="btn">
+
       <button type="button" name="prevBtn" @click="prevPage(), scrollToTop()"><i class="fas fa-arrow-left"></i>
       </button>
       <button type="button" name="nextBtn" @click="nextPage(), scrollToTop()"><i class="fas fa-arrow-right"></i>
+      </button>
+      <br>
+      <button id="return" type="button" name="return" @click="returnToFirst()">Return to Page 1
       </button>
       <h2>Page {{page}}</h2>
     </div>
@@ -96,11 +100,15 @@
       nextPage() {
         if (this.beers.length > 0) {
           this.page++;
-          this.getBeers();
+          this.getBeers();          
         }
       },
       scrollToTop() {
         window.scrollTo(0,0);
+     },
+      returnToFirst() {
+        this.page=1;
+        this.getBeers();
      }
     }
   }
@@ -126,6 +134,11 @@
     background-color: #FFD23F;
     cursor: pointer;
     border: 2px solid #5D3926;
+  }
+
+  #return {
+    width: 200px;
+    font-size: 20px;
   }
 
   i {
@@ -169,7 +182,7 @@
 
   p {
     font-family: 'KoHo', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
   }
 

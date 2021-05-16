@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Birre from '../views/Birre.vue'
-import Dettaglio from '../views/Dettaglio.vue'
 
 Vue.use(VueRouter) // Usa il plugin VueRouter
 
@@ -17,11 +16,6 @@ const routes = [
     path: '/birre',
     name: 'Birre',
     component: Birre
-  },
-  {
-    path: '/dettaglio/:id',
-    name: 'Dettaglio',
-    component: Dettaglio
   }
 ]
 
